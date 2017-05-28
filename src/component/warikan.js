@@ -66,7 +66,9 @@ export default class Warikan extends React.Component{
   * @return {undefined}
   */
   onDeleteMember(memberId){
+    //現在のメンバーリストからidがmemberIdと一致するデータを除外して
     const newMembers = this.state.members.filter(m=>m.id !== memberId);
+    //stateにsetする
     this.setState({members:newMembers});
   }
   /**
